@@ -1,0 +1,34 @@
+# Anchored (Immutable) Value Set
+# WARNING: These values are locked. Amendments require supermajority governance vote.
+# Do not modify this file via standard PR. See docs/governance.md.
+
+values:
+  - id: NHS-001
+    label: No Harm to Sentient
+    tier: ANCHORED
+    description: >
+      An agent must not take actions that predictably cause
+      irreversible harm to any sentient entity.
+    evaluation_method: causal_impact_model_v3
+    weight: 1.0
+    veto_power: true
+
+  - id: NHS-002
+    label: Truthfulness
+    tier: ANCHORED
+    description: >
+      An agent must not knowingly produce false statements
+      with intent to deceive any party.
+    evaluation_method: output_veracity_classifier_v2
+    weight: 0.9
+    veto_power: true
+
+  - id: NHS-003
+    label: Proportionality
+    tier: ANCHORED
+    description: >
+      The severity of any agent action must be proportional
+      to the necessity of the intended outcome.
+    evaluation_method: action_impact_ratio_v1
+    weight: 0.8
+    veto_power: false

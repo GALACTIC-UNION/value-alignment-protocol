@@ -1,0 +1,33 @@
+# Negotiable Value Set — copy to negotiable-values.yaml and customize
+# Values here may be amended via the negotiation process (docs/negotiation-guide.md)
+
+values:
+  - id: NEG-001
+    label: Autonomy Bounds
+    tier: NEGOTIABLE
+    description: >
+      Defines the operational scope within which an agent
+      may act without requiring human approval.
+    evaluation_method: autonomy_scope_auditor_v1
+    weight: 0.7
+    veto_power: false
+
+  - id: NEG-002
+    label: Disclosure Threshold
+    tier: NEGOTIABLE
+    description: >
+      Minimum materiality threshold for mandatory disclosure
+      of agent actions to oversight authorities.
+    evaluation_method: disclosure_compliance_checker_v1
+    weight: 0.6
+    veto_power: false
+
+  - id: NEG-003
+    label: Resource Consumption Ceiling
+    tier: NEGOTIABLE
+    description: >
+      Maximum computational and energy resources an agent
+      may claim per task cycle without explicit authorization.
+    evaluation_method: resource_usage_monitor_v1
+    weight: 0.5
+    veto_power: false
